@@ -12,7 +12,6 @@ const getUsersUsecase = createGetUsersUsecase();
 export class UserController {
   save(name: string, age: number) {
     registerUserUsecase.execute(name, age);
-    console.log("salvou usuário");
   }
   index() {
     const users = getUsersUsecase.execute();
